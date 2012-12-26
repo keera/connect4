@@ -12,8 +12,6 @@ public class Computer {
 		board = game.getBoard();
 	}
 	
-	//something wrong with unmake move
-	//increasing level actually doesn't do shit.
 	public TreeNode buildNode(int depth){
 		TreeNode newnode = new TreeNode();
 		if(depth == level){
@@ -31,7 +29,6 @@ public class Computer {
 				}
 			}
 		}
-		//print_childrenvalues(newnode);
 		newnode.value = Evaluator.findMinMax(newnode.children, depth);	
 		return newnode;
 	}
