@@ -25,10 +25,10 @@ import javax.swing.border.Border;
 import javax.swing.border.EtchedBorder;
 
 public class Connectfour extends JComponent implements ActionListener {
-	ArrayList<JButton> buttons = new ArrayList<JButton>();
-	private Human real_player;
-	private Computer comp_player;
-	private boolean first_play = false;
+    ArrayList<JButton> buttons = new ArrayList<JButton>();
+    private Human real_player;
+    private Computer comp_player;
+    private boolean first_play = false;
 	
     private JButton button_1 = new JButton("Play 1");
     private JButton button_2 = new JButton("Play 2");
@@ -76,7 +76,7 @@ public class Connectfour extends JComponent implements ActionListener {
 	//draws the board
 	public void paintComponent(Graphics graphics) {
 		//get board dimensions
-		int width  = getWidth();
+	    int width  = getWidth();
         int height = getHeight();
         
         int cellWidth = width / board.getWidth();
