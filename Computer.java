@@ -1,6 +1,4 @@
 import java.awt.Point;
-
-
 public class Computer {
 	private Connectfour game;
 	private Board board;
@@ -58,13 +56,13 @@ public class Computer {
 				}
 			}
 		} 
-		
+		//nowhere to move
 		if(best_col == -1){
-			System.out.println("Game Over");
+			Connectfour.alert("Game Over");
+			board.reset();
 		}else{
 			this.insert(best_col);
 		}
-	
 	}
 	
 	public void insert(int column) {
@@ -74,8 +72,10 @@ public class Computer {
 				Point newpoint = new Point(i,column);
 				board.saveMove(newpoint);
 				game.repaint();
-				if(Board.evaluate_position() >= 200000){
-					System.out.println("Computer wins");
+				System.out.println("comptuer moved. The board value is : " + Board.evaluate_position());
+				if(Board.evaluate_position() > 200000){
+					Connectfour.alert("Computer wins!");
+					board.reset();
 				}
 				return;
 			}

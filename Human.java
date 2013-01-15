@@ -1,6 +1,4 @@
 import java.awt.Point;
-
-
 public class Human{
 	private Connectfour game;
 	private Board board;
@@ -17,8 +15,10 @@ public class Human{
 				Point newpoint = new Point(i,column);
 				board.saveMove(newpoint);
 				this.game.repaint();
-				if(Board.evaluate_position() > 200000)
-					System.out.println("User wins");
+				if(Board.evaluate_position() < -100000){
+					Connectfour.alert("User wins!");
+					board.reset();
+				}
 				return;
 			}
 		}
