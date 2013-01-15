@@ -1,4 +1,5 @@
 import java.awt.Point;
+
 public class Human{
 	private Connectfour game;
 	private Board board;

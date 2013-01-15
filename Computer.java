@@ -1,4 +1,5 @@
 import java.awt.Point;
+
 public class Computer {
 	private Connectfour game;
 	private Board board;
@@ -72,7 +73,7 @@ public class Computer {
 				Point newpoint = new Point(i,column);
 				board.saveMove(newpoint);
 				game.repaint();
-				System.out.println("comptuer moved. The board value is : " + Board.evaluate_position());
+				//System.out.println("comptuer moved. The board value is : " + Board.evaluate_position());
 				if(Board.evaluate_position() > 200000){
 					Connectfour.alert("Computer wins!");
 					board.reset();
